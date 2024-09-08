@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Arrow</title>
+</head>
+<body>
+
+    <h1>Función Arrow en JavaScript</h1>
+
+    <p>La suma de dos números:</p>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="calcularSuma()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let suma = (a, b) => a + b;
+
+        function calcularSuma() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let resultado = suma(num1, num2);
+            document.getElementById('resultado').textContent = "Resultado: " + resultado;
+        }
+    </script>
+
+</body>
+</html>

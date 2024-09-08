@@ -1,0 +1,9 @@
+<div id="ele1">hola script</div>
+<script>
+function pintar(){
+    ele.style.backgroundColor = ele.style.backgroundColor === 'green' ? 'yellow' : 'green';
+}
+const ele = document.getElementById("ele1");
+ele.style.backgroundColor = 'green'; // Color de fondo inicial
+ele.addEventListener("click", pintar);
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Función de Expresión</title>
+</head>
+<body>
+    <h1>Resultado de la Función de Expresión</h1>
+    
+    
+    <label for="valorA">Valor A: </label>
+    <input type="number" id="valorA">
+    <br>
+    <label for="valorB">Valor B: </label>
+    <input type="number" id="valorB">
+    <br>
+    <label for="valorC">Valor C: </label>
+    <input type="number" id="valorC">
+    <br><br>
+
+    <button onclick="mostrarResultado()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        
+        const example = function(a, b, c) {
+            return a + b + c;
+        };
+
+        
+        function mostrarResultado() {
+            const a = parseFloat(document.getElementById('valorA').value);
+            const b = parseFloat(document.getElementById('valorB').value);
+            const c = parseFloat(document.getElementById('valorC').value);
+
+           
+            const resultado = example(a, b, c);
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>

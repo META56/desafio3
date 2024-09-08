@@ -1,0 +1,17 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Función pintar que recibe un color con valor predeterminado "green"
+    function pintar(element, color = 'green') {
+        // Cambiar el color del fondo del elemento
+        element.style.backgroundColor = color;
+    }
+
+    const parrafo = document.getElementById("parrafo");
+
+    // Pintar el párrafo de verde por defecto cuando se cargue la página
+    pintar(parrafo);
+
+    // Al hacer clic en el párrafo, se pasa el color "yellow" a la función pintar
+    parrafo.addEventListener("click", function(event) {
+        pintar(event.target, 'yellow');
+    });
+});

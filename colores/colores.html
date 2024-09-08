@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divs Coloridos</title>
+<style>
+.box {
+width: 200px;
+height: 200px;
+display: inline-block;
+margin: 10px;
+cursor: pointer; /* Opcional, para indicar que el div es clickeable */
+}
+
+</style>
+</head>
+<body>
+<div id="divAzul" class="box" style="background-color: blue;"></div>
+<div id="divRojo" class="box" style="background-color: red;"></div>
+<div id="divVerde" class="box" style="background-color: green;"></div>
+<div id="divAmarillo" class="box" style="background-color: yellow;"></div>
+
+<script>
+// Función para cambiar el color a negro
+function cambiarColorNegro(event) {
+event.target.style.backgroundColor = 'black';
+}
+
+// Obtener los divs por sus identificadores
+const divAzul = document.getElementById('divAzul');
+const divRojo = document.getElementById('divRojo');
+const divVerde = document.getElementById('divVerde');
+const divAmarillo = document.getElementById('divAmarillo');
+
+// Agregar el evento click a cada div
+divAzul.addEventListener('click', cambiarColorNegro);
+divRojo.addEventListener('click', cambiarColorNegro);
+divVerde.addEventListener('click', cambiarColorNegro);
+divAmarillo.addEventListener('click', cambiarColorNegro);
+
+</script>
+</body>
+</html>
